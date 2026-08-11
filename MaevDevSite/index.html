@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="MaevDev — личная цифровая мастерская: C#, ASP.NET Core, Godot и game design." />
     <title>MaevDev</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/src/assets/icon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -13,27 +13,188 @@
 <body>
     <header class="site-header" id="navbar">
         <a class="brand" href="#top" aria-label="MaevDev на главную"><span class="brand__mark">M</span><span>MaevDev</span></a>
-        <nav class="desktop-nav" aria-label="Основная навигация"><a href="#about">Обо мне</a><a href="#stack">Стек</a><a href="#projects">Проекты</a></nav>
+        <nav class="desktop-nav" aria-label="Основная навигация">
+            <a href="#about">Обо мне</a>
+            <a href="#stack">Стек</a>
+            <a href="#projects">Проекты</a>
+        </nav>
         <a class="header-cta" href="#contact">Связаться <span>↗</span></a>
-        <button class="menu-button" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+        <button class="menu-button" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span>
+        </button>
     </header>
+
     <main id="top">
         <section class="hero section-shell">
-            <div class="hero__copy reveal"><p class="eyebrow"><span class="status-dot"></span> Сейчас изучаю ASP.NET Core</p><h1>Код, который<br /><em>создаёт миры.</em></h1><p class="hero__intro">Я Дима — начинающий разработчик, который соединяет backend-разработку, игровые механики и дизайн опыта.</p><div class="hero__actions"><a class="button button--primary" href="#projects">Смотреть проекты <span>↓</span></a><a class="text-link" href="#about">Познакомиться ближе <span>↗</span></a></div></div>
-            <div class="hero__visual reveal reveal-delay-2" aria-label="Изометрическая иллюстрация проекта"><div class="visual-grid"></div><div class="visual-label visual-label--top">BUILD 0.1 / ONLINE</div><div class="orbit orbit--one"></div><div class="orbit orbit--two"></div><img src="/src/assets/hero.png" alt="Изометрическая форма проекта MaevDev" /><div class="code-chip"><span class="code-chip__dot"></span><span>func _ready()</span><b>✓</b></div><div class="visual-label visual-label--bottom">MAEVD / 2026</div></div>
-            <div class="hero__footer"><span>01 — Личная цифровая мастерская</span><span>Скролльте, чтобы исследовать <b>↓</b></span></div>
+            <div class="hero__copy reveal">
+                <p class="eyebrow"><span class="status-dot"></span> Сейчас изучаю ASP.NET Core</p>
+                <h1>Код, который<br /><em>создаёт миры.</em></h1>
+                <p class="hero__intro">Я Дима — начинающий разработчик, который соединяет backend-разработку, игровые механики и дизайн опыта.</p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#projects">Смотреть проекты <span>↓</span></a>
+                    <a class="text-link" href="#about">Познакомиться ближе <span>↗</span></a>
+                </div>
+            </div>
+            <div class="hero__visual reveal reveal-delay-2" aria-label="Изометрическая иллюстрация проекта">
+                <div class="visual-grid"></div>
+                <div class="visual-label visual-label--top">BUILD 0.1 / ONLINE</div>
+                <div class="orbit orbit--one"></div>
+                <div class="orbit orbit--two"></div>
+                <div class="orbit-icon" aria-hidden="true"><span>⌁</span></div>
+                <div class="code-chip">
+                    <span class="code-chip__dot"></span><span>func _ready()</span><b>✓</b>
+                </div>
+                <div class="visual-label visual-label--bottom">MAEVD / 2026</div>
+            </div>
+            <div class="hero__footer">
+                <span>01 — Личная цифровая мастерская</span>
+                <span>Скролльте, чтобы исследовать <b>↓</b></span>
+            </div>
         </section>
-        <section class="about section-shell section-shell--split" id="about"><div class="section-index">01 <span>/</span> ABOUT</div><div class="about__content reveal"><p class="eyebrow">Немного обо мне</p><h2>Не просто пишу код.<br /><span>Собираю системы.</span></h2><p>Мне нравится разбираться, как всё устроено внутри: от API и баз данных до логики персонажа в игре. Я учусь через реальные проекты и постепенно превращаю идеи в работающие продукты.</p><p>В этом портфолио — мой путь, эксперименты и вещи, которые хочется довести до релиза.</p><a class="text-link" href="#contact">Открыт к новым знакомствам <span>↗</span></a></div><div class="about__note reveal reveal-delay-2"><span class="note__pin">●</span><p>"Если вы ничего не создаете,<br />вы не будете процветать,<br />каким бы умелым или талантливым вы ни были.”</p><small>— Кэл Ньюпорт</small><div class="note__scribble">keep going</div></div></section>
-        <section class="stack section-shell" id="stack"><div class="section-heading reveal"><div><p class="eyebrow">Инструменты в работе</p><h2>Мой <span>стек.</span></h2></div><p>Технологии — это инструменты.<br />Главное — задача и желание её решить.</p></div><div class="stack-grid"><article class="stack-card stack-card--wide reveal"><span class="card-number">01</span><div class="stack-icon">{ }</div><h3>C# / Backend</h3><p>Строю API и сервисы на ASP.NET Core. Изучаю архитектуру, базы данных и то, как сделать backend надёжным.</p><div class="tags"><span>ASP.NET Core</span><span>Entity Framework</span><span>REST API</span></div></article><article class="stack-card stack-card--dark reveal reveal-delay-1"><span class="card-number">02</span><div class="stack-icon">⌁</div><h3>Godot / Games</h3><p>Прототипирую игры на C#: механики, управление, состояния и маленькие миры, в которые хочется играть.</p><div class="tags"><span>Godot</span><span>C#</span><span>GDScript</span></div></article><article class="stack-card stack-card--accent reveal reveal-delay-2"><span class="card-number">03</span><div class="stack-icon">✦</div><h3>Game design</h3><p>Думаю не только о том, как работает игра, но и о том, что чувствует игрок на каждом шаге.</p><div class="tags"><span>Механики</span><span>Прототипы</span></div></article></div></section>
-        <section class="projects section-shell" id="projects"><div class="section-heading reveal"><div><p class="eyebrow">Из мастерской</p><h2>Проекты и<br /><span>эксперименты.</span></h2></div><a class="text-link" href="#contact">Обсудить идею <span>↗</span></a></div><div class="project-list"><article class="project project--featured reveal"><div class="project__art project__art--api"><div class="terminal"><div class="terminal__bar"><i></i><i></i><i></i><span> Nutritionary / WebSite</span></div><pre><code><b>GET</b> /api/Nutrition
+
+        <section class="about section-shell section-shell--split" id="about">
+            <div class="section-index">01 <span>/</span> ABOUT</div>
+            <div class="about__content reveal">
+                <p class="eyebrow">Немного обо мне</p>
+                <h2>Не просто пишу код.<br /><span>Собираю системы.</span></h2>
+                <p>Мне нравится разбираться, как всё устроено внутри: от API и баз данных до логики персонажа в игре. Я учусь через реальные проекты и постепенно превращаю идеи в работающие продукты.</p>
+                <p>В этом портфолио — мой путь, эксперименты и вещи, которые хочется довести до релиза.</p>
+                <a class="text-link" href="#contact">Открыт к новым знакомствам <span>↗</span></a>
+            </div>
+            <div class="about__note reveal reveal-delay-2">
+                <span class="note__pin">●</span>
+                <p>"Если вы ничего не создаете,<br />вы не будете процветать,<br />каким бы умелым или талантливым вы ни были.”</p>
+                <small>— Кэл Ньюпорт</small>
+                <div class="note__scribble">keep going</div>
+            </div>
+        </section>
+
+        <section class="stack section-shell" id="stack">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow">Инструменты в работе</p>
+                    <h2>Мой <span>стек.</span></h2>
+                </div>
+                <p>Технологии — это инструменты.<br />Главное — задача и желание её решить.</p>
+            </div>
+            <div class="stack-grid">
+                <article class="stack-card stack-card--wide reveal">
+                    <span class="card-number">01</span>
+                    <div class="stack-icon">{ }</div>
+                    <h3>C# / Backend</h3>
+                    <p>Строю API и сервисы на ASP.NET Core. Изучаю архитектуру, базы данных и то, как сделать backend надёжным.</p>
+                    <div class="tags">
+                        <span>ASP.NET Core</span><span>Entity Framework</span><span>REST API</span>
+                    </div>
+                </article>
+                <article class="stack-card stack-card--dark reveal reveal-delay-1">
+                    <span class="card-number">02</span>
+                    <div class="stack-icon">⌁</div>
+                    <h3>Godot / Games</h3>
+                    <p>Прототипирую игры на C#: механики, управление, состояния и маленькие миры, в которые хочется играть.</p>
+                    <div class="tags">
+                        <span>Godot</span><span>C#</span><span>GDScript</span>
+                    </div>
+                </article>
+                <article class="stack-card stack-card--accent reveal reveal-delay-2">
+                    <span class="card-number">03</span>
+                    <div class="stack-icon">✦</div>
+                    <h3>Game design</h3>
+                    <p>Думаю не только о том, как работает игра, но и о том, что чувствует игрок на каждом шаге.</p>
+                    <div class="tags">
+                        <span>Механики</span><span>Прототипы</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects section-shell" id="projects">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow">Из мастерской</p>
+                    <h2>Проекты и<br /><span>эксперименты.</span></h2>
+                </div>
+                <a class="text-link" href="#contact">Обсудить идею <span>↗</span></a>
+            </div>
+
+            <!-- Фильтры проектов -->
+            <div class="project-filters reveal reveal-delay-1">
+                <button class="filter-btn is-active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="game">Игры</button>
+            </div>
+
+            <div class="project-list">
+                <!-- Карточка Nutritionary -->
+                <article class="project project--featured reveal">
+                    <div class="project__art project__art--api">
+                        <div class="terminal">
+                            <div class="terminal__bar">
+                                <i></i><i></i><i></i><span> Nutritionary / WebSite</span>
+                            </div>
+                            <pre><code><b>GET</b> /api/Nutrition
 <em>200</em> OK  <span>{ "status": "building" }</span>
 
 <strong>→ clean architecture</strong>
-<strong>→ useful features</strong></code></pre></div></div><div class="project__meta"><span class="project__type">BACKEND / IN PROGRESS</span><h3>Nutritionary</h3><p>Веб приложение для расчета рациона с полной документацией на все интересующие по питанию и спорту темы.</p><span class="project__arrow">↗</span></div></article><article class="project reveal reveal-delay-1"><div class="project__art project__art--game"><div class="game-window"><span class="game-window__title">Couriosity / prototype 05</span><div class="game-crosshair">+</div><span class="game-window__hint"> WASD to move</span></div></div><div class="project__meta"><span class="project__type">GODOT / In Progress</Progress></span><h3>Couriosity</h3><p>Игра по вселенной Couriosity</p><span class="project__arrow">↗</span></div></article></div></section>
-        <section class="contact section-shell" id="contact"><div class="contact__inner reveal"><p class="eyebrow">Есть идея?</p><h2>Давайте соберём<br /><em>что-то интересное.</em></h2><p>Я всегда рад обсудить проект, совместный эксперимент или просто поговорить о разработке.</p><a class="button button--primary" href="mailto:maevgdev@gmail.com">Написать мне <span>↗</span></a></div><div class="contact__side"><span>Связаться</span><a href="maevgdev@gmail.com">maevgdev@gmail.com</a><a href="https://github.com/TchkaA" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://t.me/Chpkaa" target="_blank" rel="noreferrer">Telegram ↗</a></div></section>
+<strong>→ useful features</strong></code></pre>
+                        </div>
+                    </div>
+                    <div class="project__meta">
+                        <span class="project__type">BACKEND / IN PROGRESS</span>
+                        <h3>Nutritionary</h3>
+                        <p>Веб приложение для расчета рациона с полной документацией на все интересующие по питанию и спорту темы.</p>
+                        <span class="project__arrow">↗</span>
+                    </div>
+                </article>
+
+                <!-- Карточка Couriosity -->
+                <article class="project reveal reveal-delay-1">
+                    <div class="project__art project__art--game">
+                        <div class="game-window">
+                            <span class="game-window__title">Couriosity / prototype 05</span>
+                            <div class="game-crosshair">+</div>
+                            <span class="game-window__hint"> WASD to move</span>
+                        </div>
+                    </div>
+                    <div class="project__meta">
+                        <span class="project__type">GODOT / In Progress</span>
+                        <h3>Couriosity</h3>
+                        <p>Игра по вселенной Couriosity</p>
+                        <span class="project__arrow">↗</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact section-shell" id="contact">
+            <div class="contact__inner reveal">
+                <p class="eyebrow">Есть идея?</p>
+                <h2>Давайте соберём<br /><em>что-то интересное.</em></h2>
+                <p>Я всегда рад обсудить проект, совместный эксперимент или просто поговорить о разработке.</p>
+                <a class="button button--primary" href="mailto:maevgdev@gmail.com">Написать мне <span>↗</span></a>
+            </div>
+            <div class="contact__side">
+                <span>Связаться</span>
+                <a href="mailto:maevgdev@gmail.com">maevgdev@gmail.com</a>
+                <a href="https://github.com/TchkaA" target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a href="https://t.me/Chpkaa" target="_blank" rel="noreferrer">Telegram ↗</a>
+            </div>
+        </section>
     </main>
-    <footer class="footer section-shell"><a class="brand" href="#top"><span class="brand__mark">M</span><span>MaevDev</span></a><span>Сделано с любовью к C#</span><span>© 2026</span></footer>
-    <div class="mobile-menu" id="mobileOverlay"><a href="#about">Обо мне</a><a href="#stack">Стек</a><a href="#projects">Проекты</a><a href="#contact">Контакты</a></div>
+
+    <footer class="footer section-shell">
+        <a class="brand" href="#top"><span class="brand__mark">M</span><span>MaevDev</span></a>
+        <span>Сделано с любовью к C#</span>
+        <span>© 2026</span>
+    </footer>
+
+    <div class="mobile-menu" id="mobileOverlay">
+        <a href="#about">Обо мне</a>
+        <a href="#stack">Стек</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
